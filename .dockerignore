@@ -1,0 +1,6 @@
+.env
+purge.db
+purge_log.csv
+bot.log
+__pycache__/
+.git/

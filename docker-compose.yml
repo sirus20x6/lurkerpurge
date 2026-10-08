@@ -1,0 +1,12 @@
+services:
+  lurkerpurge:
+    build: .
+    image: lurkerpurge:local
+    container_name: lurkerpurge
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - lurkerpurge-data:/data   # purge.db (who has posted) and purge_log.csv (removals)
+
+volumes:
+  lurkerpurge-data:
